@@ -10,3 +10,14 @@ const result = (function(exports, module){
     return module.exports;
 }).apply(null, [null, {exports: {}}]);
 console.log(result);
+
+/**
+ * 
+ * apply-
+ * the first parameter for apply:-  export
+ * the second parameter for apply :- module
+ * 
+ * outPut
+     firstname: 'John',
+     lastname: 'Smith'
+ */
