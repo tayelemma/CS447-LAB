@@ -14,4 +14,6 @@ CS447-LAB
     5. [Exercise 2-1](./Lab-2/Exercise2-4.js)
     3. [Exercise 3](./Lab-2/Exercise3.js)
 3. Lab 3 
-    1. [Exercise 1](./Lab-3/)
+    1. [Exercise 1](./Lab-3/app.js)
+4. Lab 4
+    1. [Exercise 1](./Lab-4/app.js)
