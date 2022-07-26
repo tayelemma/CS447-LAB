@@ -1,28 +1,29 @@
+/**
+ * Create a npm project and install Express.js (Nodemon if you want)
+   Change your Express.js app which serves HTML files (of your choice with your content) for “/”, “/users” and “/products”.
+   For “/users” and “/products”, provides GET and POST requests handling (of your choice with your content) in different routers.
+   Add some static (.js or .css) files to your project that should be required by at least one of your HTML files.
+   Customize your 404 page
+   Provide your own error handling
+ */
+
 const express = require('express');
-const app = express();
+const userRouter = require('./routes/userRouter');
+const productRouter = require('./routes/productRouter');
 const path = require('path');
 
+const app = express();
 
-app.set('port', process.env.PORT || 3000);
+
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname,'public')));
 
+app.use(userRouter);
+app.use(productRouter);
 
-app.use('/login', (req, res, next) => {
-    if (req.body.username === 'too@miu.edu' &&  req.body.password === '****') {
-        res.redirect('/products');
-    }
-    else {
-        res.redirect('/users');
-    }
+app.use((req,res,next)=>{
+    res.status(404).send(path.join(__dirname,'views','404.html'));
 });
 
 
-app.use('/products', (req, res, next) => {
-    res.sendFile(path.join(__dirname, 'products.html'));
-})
-
-app.use('/', (req, res, next) => {
-    res.sendFile(path.join(__dirname, 'users.html'));
-});
-
-app.listen(app.get('port'), () => console.log(`Listening on port ${app.get('port')}`));
+app.listen(3000, ()=> console.log('3000'));
