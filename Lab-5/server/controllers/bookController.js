@@ -1,5 +1,6 @@
 const Book = require('../models/book');
 
+// checked
 exports.getAll = (req, res, next) => {
     res.json(Book.getAll());
 }
