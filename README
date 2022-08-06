@@ -17,7 +17,7 @@ CS447-LAB
     1. [Exercise 1](./Lab-3/app.js)
 4. Lab 4
     1. [Exercise 1](./Lab-4/app.js)
-5. Lab 5
+5. Lab 5 RESTful API
     1. client
     2. server
         i. controllers
@@ -26,3 +26,8 @@ CS447-LAB
             a. [books](./Lab-5/server/models/book.js)
         iii.routes
             a. [app](./Lab-5/server/app.js)
+6. Lab 6 Mongo Client
+    1.client
+    2.server
+7. Lab 7 mongoose
+8. Lab 8 Authoriztion 
