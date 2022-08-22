@@ -1,0 +1,14 @@
+
+#create-btn    {
+    border-radius: 50px;
+}
+#username{
+    border-radius: 50px;
+}
+#create-pwd{
+    border-radius: 50px;
+}
+
+#create-btn{
+    background-color: rgb(96, 200, 234);
+}
